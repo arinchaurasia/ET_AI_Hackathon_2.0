@@ -1,8 +1,8 @@
 # 🛡️ VentiGuard AI: AI-Powered Industrial Safety Intelligence
 
 > **ET AI Hackathon 2026 Submission**
-> **Theme:** Industrial Intelligence / Worker Safety / Geospatial Safety Analytics[cite: 1]
-> **Problem Statement 1:** AI-Powered Industrial Safety Intelligence for Zero-Harm Operations[cite: 1]
+> **Theme:** Industrial Intelligence / Worker Safety / Geospatial Safety Analytics
+> **Problem Statement 1:** AI-Powered Industrial Safety Intelligence for Zero-Harm Operations
 
 ## 🚨 The Problem: The Cost of Disconnected Data
 India's heavy industrial sector suffers from a devastating context deficit[cite: 1, 2]. In major fatal incidents—such as the Visakhapatnam Steel Plant explosion—functioning SCADA systems and gas detectors existed, but the data was unacted upon because there was no intelligence layer connecting sensor readings to operational decisions in time[cite: 1]. 
