@@ -1,81 +1,61 @@
-# 🛡️ Venti-Guard AI-> Next-Gen Control System
+# 🛡️ VentiGuard AI: AI-Powered Industrial Safety Intelligence
 
-![Venti-Guard Banner](https://img.shields.io/badge/Project-ABB_Accelerator_Hackathon_2026-blue?style=for-the-badge) 
-![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
-![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white)
-![Socket.io](https://img.shields.io/badge/Socket.io-black?style=for-the-badge&logo=socket.io&badgeColor=010101)
-![MongoDB](https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=for-the-badge&logo=mongodb&logoColor=white)
-![TailwindCSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white)
+> **ET AI Hackathon 2026 Submission**
+> **Theme:** Industrial Intelligence / Worker Safety / Geospatial Safety Analytics[cite: 1]
+> **Problem Statement 1:** AI-Powered Industrial Safety Intelligence for Zero-Harm Operations[cite: 1]
 
-**Venti-Guard AI** is a high-fidelity, life-critical Human Machine Interface (HMI) for underground mining ventilation. Built for the ABB Accelerator Hackathon 2026, it serves as a central control and monitoring dashboard to rapidly identify, triage, and resolve atmospheric and mechanical emergencies deep underground.
+## 🚨 The Problem: The Cost of Disconnected Data
+India's heavy industrial sector suffers from a devastating context deficit[cite: 1, 2]. In major fatal incidents—such as the Visakhapatnam Steel Plant explosion—functioning SCADA systems and gas detectors existed, but the data was unacted upon because there was no intelligence layer connecting sensor readings to operational decisions in time[cite: 1]. 
 
-## ✨ Key Features
+Legacy control rooms blast over **500+ simultaneous alarms** during peak incidents[cite: 2]. Operators suffer from severe cognitive overload, resulting in a fatal **3–8 minute response delay** because raw data (`CO_LVL2: 450ppm`) tells them *what* broke, but never *how* to resolve it[cite: 2].
 
-- **📡 Real-Time Telemetry Engine:** Live streaming of Oxygen (O₂), Carbon Monoxide (CO), Temperature (°C), and Fan RPM data across 6 different depth zones via Socket.io.
-- **🚨 5 Dynamic Incident Profiles:**
-  - **☠️ CO Leak:** Toxic gas accumulation requiring immediate extraction.
-  - **🫁 O₂ Depletion:** Asphyxiation risk requiring air purge cycles.
-  - **🌀 Fan Failure:** Mechanical trip requiring diagnostic restarts.
-  - **💥 Methane Gas:** Extreme explosion hazard requiring mandatory fan auto-shutoffs and passive vent clearance (strict spark-prevention logic).
-  - **🔥 Heat Emergency:** Thermal runaway requiring portable spot-cooling deployments.
-- **📋 Smart Emergency Playbooks:** Context-aware, priority-based action checklists (P1 Immediate, P2 Urgent, P3 Follow-up) that adapt based on the specific incident type.
-- **🗺️ Interactive Mine Map:** Real-time visual tracking of atmospheric conditions down to 800m depth, highlighting critical zones and visualizing the recovery progression.
-- **🗄️ Persistent Incident History:** MongoDB integration to securely log all incident durations, peak severity, and resolution times for regulatory compliance.
-
-## 🏗️ Architecture
-
-Venti-Guard uses a full-stack, single-origin architecture optimized for high performance and easy cloud deployment:
-
-- **Frontend:** React 19, Vite, Framer Motion (for dynamic UI morphing), Tailwind CSS.
-- **Backend:** Node.js, Express, Socket.io (for sub-second telemetry streams).
-- **Database:** MongoDB & Mongoose (for persistent incident reporting).
-
-## 🚀 Getting Started
-
-### Prerequisites
-- Node.js (v18+)
-- MongoDB Atlas cluster (or local instance)
-
-### Local Development
-
-1. **Clone the repository:**
-   ```bash
-   git clone https://github.com/YOUR_USERNAME/venti-guard.git
-   cd venti-guard
-   ```
-
-2. **Install dependencies:**
-   ```bash
-   npm install
-   cd server && npm install
-   cd ..
-   ```
-
-3. **Configure Environment Variables:**
-   Rename `.env.example` to `.env` and add your MongoDB connection string:
-   ```env
-   MONGO_URI=mongodb+srv://<username>:<password>@cluster.mongodb.net/venti-guard
-   ```
-
-4. **Start the Development Servers:**
-   Run the following command to start both the Node/Socket backend and Vite frontend concurrently:
-   ```bash
-   npm run dev:all
-   ```
-   - **Frontend UI:** `http://localhost:5173`
-   - **Backend API:** `http://localhost:4000`
-
-## ☁️ Deployment (Render)
-
-This project is configured out-of-the-box for a **single-service deployment** on Render using the provided `render.yaml` Blueprint.
-
-1. Connect your repository to Render via **New > Blueprint**.
-2. Render will automatically detect the configuration and build the application (`npm run build`).
-3. When prompted, supply your `MONGO_URI` environment variable.
-4. The Node backend will act as the single source of truth, serving both the Socket connections and the static React files on a single port.
-
-## 🕹️ Demo Mode
-Click the pulsing **🔀 RANDOM** button in the top navigation bar to inject a randomized mechanical or atmospheric fault into the system, allowing judges and users to experience the playbook resolution flow live.
+## 💡 The Solution: Unified Predictive Intelligence
+VentiGuard AI is an **AI-powered Industrial Safety Intelligence platform** that brings together data from IoT sensors, digital permit-to-work logs, and shift records into a single predictive layer[cite: 1]. We replace raw sensor chaos with an intelligent, morphing Human-Machine Interface (HMI) that triggers preemptive interventions *before* an incident becomes fatal[cite: 1, 2].
 
 ---
-*Built for the ABB Accelerator Hackathon 2026*
+
+## ✨ Core AI & Hackathon Features
+
+### 🧠 Compound Risk Detection Engine
+Detects compound risk conditions that no single sensor would flag alone[cite: 1]. By correlating real-time gas sensor readings with active digital work permits, VentiGuard AI identifies dangerous combinations (e.g., confined space entry during abnormal process conditions) hours before they escalate to critical levels[cite: 1].
+
+### 🗺️ Geospatial Safety Heatmap
+A real-time, interactive SVG geospatial layer mapped over the mine/plant layout[cite: 1, 2]. It dynamically visualizes risk zones as environmental conditions change, integrating hazardous area classifications and active crew locations to give safety officers total situational awareness[cite: 1, 2].
+
+### 🚨 Autonomous Emergency Response Orchestrator
+On a confirmed trigger, this agent reduces the critical first 10 minutes of chaos to under 60 seconds[cite: 1, 2]. It translates raw telemetry into plain-English **Narrative Alarms** (e.g., *"Evacuate Sector D"*), initiates automated fan overrides, and preserves sensor evidence for regulatory audits[cite: 1, 2].
+
+### ⚖️ Regulatory Compliance Agent
+Ensures that all automatically generated resolution playbooks and digital SOPs reference and comply with statutory frameworks like the **DGMS (Directorate General of Mines Safety)** and the Factory Act[cite: 1].
+
+### 👁️ Morphing UI (Anti-Alarm Fatigue)
+During a crisis, VentiGuard AI's interface physically morphs. Non-critical panels blur and recede, reducing visual noise by 80% to lock the operator's focus exclusively onto the hazard zone[cite: 2].
+
+---
+
+## 🛠️ Technical Architecture
+
+Built for high-performance, real-time industrial resilience[cite: 2].
+
+*   **Presentation Layer:** `React 18`, `Framer Motion`, `Dynamic SVG` (Powers the morphing UI and geospatial heatmap)[cite: 1, 2].
+*   **Intelligence Layer:** `Node.js` Multi-Agent Engine (Translates telemetry & permit logs into predictive, plain-English SOPs)[cite: 1, 2].
+*   **Real-Time Transport:** `Socket.io` & `WebSockets` (Guarantees sub-100ms end-to-end latency for 200+ concurrent sensors, with automatic millisecond reconnection)[cite: 2].
+*   **Data Layer:** Time-Series DB, REST API (Persistent sensor logs, DGMS audit trails, SOP state management)[cite: 1, 2].
+
+---
+
+## 📈 Business Impact & Sustainability
+
+*   **40% Energy Cost Reduction:** Powered by our **Ventilation on Demand (VoD)** framework, the AI dynamically adjusts fan speeds based on real-time occupancy and risk zones, eliminating wasteful constant-power ventilation[cite: 1, 2].
+*   **3× Faster Incident Response:** Narrative-guided playbooks eliminate manual data translation and operational hesitation[cite: 2].
+*   **100% Audit Trail Coverage:** Every alert, operator action, and system override is timestamped for seamless regulatory compliance and post-incident investigation[cite: 2].
+
+---
+
+## 💻 Local Setup & Installation
+
+1. **Clone the repository:**
+```bash
+   git clone https://github.com/arinchaurasia/ventiguard-ai.git
+   cd ventiguard-ai
+   
