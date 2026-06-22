@@ -1,4 +1,4 @@
-# 🛡️ VentiGuard AI: AI-Powered Industrial Safety Intelligence
+# 🛡️ Venti-Guard AI: AI-Powered Industrial Safety Intelligence
 
 > **ET AI Hackathon 2026 Submission**
 > **Theme:** Industrial Intelligence / Worker Safety / Geospatial Safety Analytics
