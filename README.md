@@ -2,6 +2,7 @@
 
 > **ET AI Hackathon 2026 Submission**
 > **Theme:** Industrial Intelligence / Worker Safety / Geospatial Safety Analytics
+
 > **Problem Statement 1:** AI-Powered Industrial Safety Intelligence for Zero-Harm Operations
 
 ## 🚨 The Problem: The Cost of Disconnected Data
